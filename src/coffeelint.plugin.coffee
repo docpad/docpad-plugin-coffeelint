@@ -13,18 +13,16 @@ module.exports = (BasePlugin) ->
     config:
       ignorePaths: [ ]
       ignoreFiles: [ ]
-      ignoreMinified: true
-      globals: { }       # additional predefined global variables
-      hintOptions: { }
+      lintOptions: { }
     
-      # Render After
+      # Render Before
       # Called just just after we've rendered all the files.
-    renderAfter: ({collection}) ->
+    renderBefore: ({collection}) ->
       if docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
-        if config.hintOptions.maxerr
-          maxErrors = config.hintOptions.maxerr
+        if config.lintOptions.maxerr
+          maxErrors = config.lintOptions.maxerr
         else
           maxErrors = 50
    
@@ -39,11 +37,9 @@ module.exports = (BasePlugin) ->
 
         collection.each (item) ->
           file = item.attributes
-          tooManyErrors = false
           
-          # Find JS files
-          if file.extension is 'js'
-            
+          # Find coffee files
+          if file.extension is 'coffee'
             # Skip files in ignored paths
             for path in ignoredPaths
               if file.relativePath.indexOf(path) is 0
@@ -53,35 +49,19 @@ module.exports = (BasePlugin) ->
             for fileName in config.ignoreFiles
               if file.relativePath is fileName
                 return
-
-            # Skip minified files (based on .min.js convention)
-            if config.ignoreMinified
-              if file.relativePath.indexOf('.min.js') isnt -1
-                return
-
             # Skip valid files
-            if coffeelint(file.source, config.options, config.globals) is true
+            if coffeelint.lint(file.source, config.options).length is 0
               return
 
             else
               # Print filename
-              console.log 'coffeelint - '.white + file.relativePath.red
-              
-              # Trim errors down to max to prevent failure
-              if coffeelint.errors.length > maxErrors
-                tooManyErrors = true
-                while coffeelint.errors.length > maxErrors
-                  coffeelint.errors.pop()
-              
+              console.log 'CoffeeLint - '.white + file.relativePath.red
+              coffeelint.errors = coffeelint.lint(file.source, config.options)
               # Print errors
               for err in coffeelint.errors
-                ref = 'line ' + err.line + ', char ' + err.character
-                message = err.reason
+                ref = 'line ' + err.lineNumber
+                message = err.message
                 console.log ref.blue + ' - '.white + message
-              
-              # Print warning if coffeelint,errors was > maxerr
-              if tooManyErrors
-                console.log('Too many errors.'.underline.yellow)
               
               # Line break between each file
               console.log '\n'
