@@ -50,13 +50,13 @@ module.exports = (BasePlugin) ->
               if file.relativePath is fileName
                 return
             # Skip valid files
-            if coffeelint.lint(file.source, config.options).length is 0
+            if coffeelint.lint(file.body, config.options).length is 0
               return
 
             else
               # Print filename
               console.log 'CoffeeLint - '.white + file.relativePath.red
-              coffeelint.errors = coffeelint.lint(file.source, config.options)
+              coffeelint.errors = coffeelint.lint(file.body, config.options)
               # Print errors
               for err in coffeelint.errors
                 ref = 'line ' + err.lineNumber
