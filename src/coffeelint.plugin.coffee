@@ -3,6 +3,8 @@ module.exports = (BasePlugin) ->
   # Requires
   coffeelint = require('coffeelint')
   colors = require('colors')
+  merge = require('merge')
+  fs = require('fs')
 
   # Define Plugin
   class CoffeeLintPlugin extends BasePlugin
@@ -15,12 +17,22 @@ module.exports = (BasePlugin) ->
       ignoreFiles: [ ]
       lintOptions: { }
     
-      # Render Before
-      # Called just just after we've rendered all the files.
+    # Render Before
+    # Called just just after we've rendered all the files.
     renderBefore: ({collection}) ->
       if docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
+
+        # Read .coffeelintrc
+        fs.readFile process.cwd() + '/.coffeelintrc', (err, data) ->
+          if err
+            return
+          else
+            coffeelintrc = JSON.parse(data)
+            merge(config.lintOptions, coffeelintrc)
+
+        # Set max errors
         if config.lintOptions.maxerr
           maxErrors = config.lintOptions.maxerr
         else
@@ -50,13 +62,13 @@ module.exports = (BasePlugin) ->
               if file.relativePath is fileName
                 return
             # Skip valid files
-            if coffeelint.lint(file.body, config.options).length is 0
+            if coffeelint.lint(file.body, config.lintOptions).length is 0
               return
 
             else
               # Print filename
               console.log 'CoffeeLint - '.white + file.relativePath.red
-              coffeelint.errors = coffeelint.lint(file.body, config.options)
+              coffeelint.errors = coffeelint.lint(file.body, config.lintOptions)
               # Print errors
               for err in coffeelint.errors
                 ref = 'line ' + err.lineNumber
