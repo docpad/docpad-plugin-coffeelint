@@ -2,6 +2,7 @@
 
 [![NPM version](https://badge.fury.io/js/docpad-plugin-coffeelint.png)](https://npmjs.org/package/docpad-plugin-coffeelint "View this project on NPM")
 [![Dependency Status](https://gemnasium.com/jking90/docpad-plugin-coffeelint.png)](https://gemnasium.com/jking90/docpad-plugin-coffeelint)
+[![Build Status](https://travis-ci.org/jking90/docpad-plugin-nodesass.png?branch=master)](https://travis-ci.org/jking90/docpad-plugin-nodesass)
 
 
 ## Install
