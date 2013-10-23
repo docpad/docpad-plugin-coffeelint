@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.1 Oct 23, 2013
+  - Updated coffeelint
+
 - v2.1.0 Sept 8, 2013
   - Added support for `.coffeelintrc`
 
