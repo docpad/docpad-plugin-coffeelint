@@ -20,7 +20,7 @@ module.exports = (BasePlugin) ->
     # Render Before
     # Called just just after we've rendered all the files.
     renderBefore: ({collection}) ->
-      if docpad.getEnvironment() is 'development'
+      if @docpad.getEnvironment() is 'development'
         config = @config
         ignoredPaths = [ ]
 
