@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-coffeelint",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "coffeelint plugin for docpad",
   "homepage": "https://github.com/jking90/docpad-plugin-coffeelint",
   "keywords": [
