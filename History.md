@@ -1,5 +1,8 @@
 ## History
 
+- v2.1.2 Oct 23, 2014
+  - removed reference to global docpad
+
 - v2.1.1 Oct 23, 2013
   - Updated coffeelint
 
