@@ -31,7 +31,7 @@
     "docpad": ">=6.3 <7"
   },
   "dependencies": {
-    "colors": "~0.6.0-1",
+    "colors": "~1.1.2",
     "coffeelint": "~0.6",
     "merge": "~1.1.2"
   },
