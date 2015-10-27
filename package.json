@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "colors": "~1.1.2",
-    "coffeelint": "~0.6",
+    "coffeelint": "~1.13.1",
     "merge": "~1.1.2"
   },
   "devDependencies": {
