@@ -1,7 +1,12 @@
 ## History
 
+- v2.1.3 Oct 23, 2014
+  - Updated dependencies
+  - Check `file.source` instead of `file.body` for errors
+  - Prevent re-linting a file to display errors
+
 - v2.1.2 Oct 23, 2014
-  - removed reference to global docpad
+  - Removed reference to global docpad
 
 - v2.1.1 Oct 23, 2013
   - Updated coffeelint
