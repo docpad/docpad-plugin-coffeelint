@@ -27,7 +27,7 @@
     "url": "https://github.com/jking90/docpad-plugin-coffeelint.git"
   },
   "engines": {
-    "node": ">=0.4.0",
+    "node": ">= 4",
     "docpad": ">=6.3 <7"
   },
   "dependencies": {
