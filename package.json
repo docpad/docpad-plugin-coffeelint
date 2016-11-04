@@ -38,7 +38,7 @@
   "devDependencies": {
     "coffee-script": "~1.10.0",
     "docpad": ">=6.37 <7",
-    "joe-reporter-console": "~1.2.1"
+    "joe-reporter-console": "~2.0.0"
   },
   "license": "MIT",
   "main": "./out/coffeelint.plugin.js",
