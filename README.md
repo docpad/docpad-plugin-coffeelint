@@ -1,6 +1,3 @@
-# Seeking new maintainer!
-> Open an issue if you'd like to take this project over.
-
 # [coffeelint](http://www.coffeelint.org/) Plugin for [DocPad](https://docpad.org)
 
 [![NPM version](https://badge.fury.io/js/docpad-plugin-coffeelint.png)](https://npmjs.org/package/docpad-plugin-coffeelint "View this project on NPM")
