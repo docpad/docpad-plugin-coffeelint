@@ -2,7 +2,6 @@
 module.exports = (BasePlugin) ->
 	# Requires
 	coffeelint = require('coffeelint')
-	colors = require('colors')
 	merge = require('merge')
 	fs = require('fs')
 	pathUtil = require('path')
@@ -21,7 +20,8 @@ module.exports = (BasePlugin) ->
 		# Render Before
 		# Called just just after we've rendered all the files.
 		renderBefore: ({collection}) ->
-			if @docpad.getEnvironment() is 'development'
+			docpad = @docpad
+			if docpad.getEnvironment() is 'development'
 				config = @config
 				ignoredPaths = [ ]
 
@@ -73,13 +73,11 @@ module.exports = (BasePlugin) ->
 
 						else
 							# Print filename
-							console.log 'CoffeeLint - '.white + file.relativePath.red
-							coffeelint.errors = errors
+							message = "CoffeeLint: #{file.fullPath}"
+
 							# Print errors
-							for err in coffeelint.errors
-								ref = 'line ' + err.lineNumber
-								message = err.message
-								console.log ref.blue + ' - '.white + message
+							for err in errors
+								message += "\nline #{err.lineNumber} - #{err.message}"
 
 							# Line break between each file
-							console.log '\n'
+							docpad.log('warn', message)

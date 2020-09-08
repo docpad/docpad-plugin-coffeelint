@@ -1,0 +1,28 @@
+version: ~> 1.0
+sudo: false
+language: node_js
+node_js:
+  - '10'
+  - '12'
+  - '13'
+  - '14'
+matrix:
+  fast_finish: true
+  allow_failures: []
+cache: npm
+install:
+  - >-
+    eval "$(curl -fsSL
+    https://raw.githubusercontent.com/bevry/awesome-travis/master/scripts/node-install.bash)"
+before_script:
+  - >-
+    eval "$(curl -fsSL
+    https://raw.githubusercontent.com/bevry/awesome-travis/master/scripts/node-verify.bash)"
+after_success:
+  - >-
+    eval "$(curl -fsSL
+    https://raw.githubusercontent.com/bevry/awesome-travis/master/scripts/node-publish.bash)"
+notifications:
+  email:
+    recipients: >-
+      CyfJaDEdAeNPN8mNFyIgtZiaCfm3wEISljCJjJMki+0+ie7PbcBOgP0zvtJbXpPeM1XB3iLLzP8Ijldc4GhmPR+5/Jf4pxtiws2mw6FFBpFrXYAzSq3NEwchlRuVCvbyDwIppvgRx+NYMVKqSumNthX6MlKZzwfoOPipIQyLOfI=
