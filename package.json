@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-coffeelint",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "coffeelint plugin for docpad",
   "homepage": "https://github.com/docpad/docpad-plugin-coffeelint",
   "license": "MIT",
@@ -54,7 +54,7 @@
     "Jimmy King <hello@jimmyking.me> (https://github.com/10xLaCroixDrinker)"
   ],
   "contributors": [
-    "Benjamin Lupton (https://github.com/balupton)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
     "Greenkeeper <support@greenkeeper.io> (https://github.com/greenkeeperio-bot)",
     "Jimmy King <hello@jimmyking.me> (https://github.com/10xLaCroixDrinker)",
     "Nathan Friedly (https://github.com/nfriedly)"
@@ -67,8 +67,7 @@
     "url": "https://github.com/docpad/docpad-plugin-coffeelint.git"
   },
   "engines": {
-    "node": ">=10",
-    "docpad": ">=6.3 <7"
+    "node": ">=10"
   },
   "editions": [
     {
