@@ -116,7 +116,7 @@ Install this DocPad plugin by entering <code>docpad install coffeelint</code> in
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="10x.la/croixdrinker">Jimmy King</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jimmy King on repository docpad/docpad-plugin-coffeelint">view contributions</a></li></ul>
+<ul><li><a href="10x.la/croixdrinker">Jamie King</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jamie King on repository docpad/docpad-plugin-coffeelint">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -138,7 +138,7 @@ These amazing people have contributed code to this project:
 
 <ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository docpad/docpad-plugin-coffeelint">view contributions</a></li>
 <li><a href="https://github.com/greenkeeperio-bot">Greenkeeper</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=greenkeeperio-bot" title="View the GitHub contributions of Greenkeeper on repository docpad/docpad-plugin-coffeelint">view contributions</a></li>
-<li><a href="10x.la/croixdrinker">Jimmy King</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jimmy King on repository docpad/docpad-plugin-coffeelint">view contributions</a></li>
+<li><a href="10x.la/croixdrinker">Jamie King</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=10xLaCroixDrinker" title="View the GitHub contributions of Jamie King on repository docpad/docpad-plugin-coffeelint">view contributions</a></li>
 <li><a href="https://github.com/nfriedly">Nathan Friedly</a> — <a href="https://github.com/docpad/docpad-plugin-coffeelint/commits?author=nfriedly" title="View the GitHub contributions of Nathan Friedly on repository docpad/docpad-plugin-coffeelint">view contributions</a></li></ul>
 
 <a href="https://github.com/docpad/docpad-plugin-coffeelint/blob/master/Contributing.md#files">Discover how you can contribute by heading on over to the <code>Contributing.md</code> file.</a>
@@ -152,7 +152,7 @@ These amazing people have contributed code to this project:
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; <a href="10x.la/croixdrinker">Jimmy King</a></li></ul>
+<ul><li>Copyright &copy; <a href="10x.la/croixdrinker">Jamie King</a></li></ul>
 
 and licensed under:
 
